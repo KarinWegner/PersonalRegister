@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalRegister", "PersonalRegister.csproj", "{07DAE9D5-44A2-4307-91CC-FF4852F1ECC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalRegister.Helpers", "..\PersonalRegister.Helpers\PersonalRegister.Helpers.csproj", "{B3AC9BB5-2BA7-4E1C-A92D-A7DCF7C5BAE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{07DAE9D5-44A2-4307-91CC-FF4852F1ECC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DAE9D5-44A2-4307-91CC-FF4852F1ECC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DAE9D5-44A2-4307-91CC-FF4852F1ECC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3AC9BB5-2BA7-4E1C-A92D-A7DCF7C5BAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3AC9BB5-2BA7-4E1C-A92D-A7DCF7C5BAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3AC9BB5-2BA7-4E1C-A92D-A7DCF7C5BAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3AC9BB5-2BA7-4E1C-A92D-A7DCF7C5BAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
