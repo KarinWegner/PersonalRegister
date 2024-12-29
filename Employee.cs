@@ -10,6 +10,17 @@ namespace PersonalRegister
     {
         public string Name { get; set; }
         public uint Salary { get; set; }
+        public SalaryLevel SalaryLevel 
+        { 
+            get 
+            {
+                if (Salary < 25000)
+                {
+                    return SalaryLevel.Junior;
+                }
+                else return SalaryLevel.Senior;
+            } 
+        }
 
         public Employee(string name, uint salary) 
         {
@@ -17,6 +28,6 @@ namespace PersonalRegister
             Salary = salary;
         }
 
-        public override string ToString() { return $"Name: {Name} Salary: {Salary}"; }
+        public override string ToString() { return $"Name: {Name} Salary: {Salary} SalaryLevel: {SalaryLevel}"; }
     }
 }
