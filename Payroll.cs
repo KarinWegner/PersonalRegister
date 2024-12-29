@@ -16,6 +16,7 @@ namespace PersonalRegister
 
         internal void AddEmployee(string name, uint salary)
         {
+            if(name is null) throw new ArgumentNullException(name);
             employees.Add(new Employee(name, salary));
         }
         internal void AddEmployee(Employee employee)

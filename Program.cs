@@ -9,7 +9,21 @@ namespace PersonalRegister
         static void Main(string[] args)
         {
             Main main = new Main();
-            main.Run();
+
+            try
+            {
+
+                main.Run();
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally { main.Run(); }
         }
     }
 }

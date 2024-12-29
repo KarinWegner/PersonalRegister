@@ -11,7 +11,7 @@ namespace PersonalRegister
     internal class Main
     {
         private static Payroll payroll = new Payroll();
-
+        private static ConsoleUI ui = new ConsoleUI();
         public void Run()
         {
             bool isAlive = true;
@@ -22,7 +22,7 @@ namespace PersonalRegister
             {
                 MenuHelpers.ShowMainMenu();
 
-                string input = Console.ReadLine().ToUpper();
+                string input = ui.GetInput().ToUpper();
 
                 switch (input)
                 {
@@ -47,14 +47,14 @@ namespace PersonalRegister
             string name = Util.AskForString("Name");
             uint salary = Util.AskForUInt("Salary");
 
-            payroll.AddEmployee(new Employee(name, salary));
+            payroll.AddEmployee(name, salary);
         }
         private static void PrintEmployees()
         {
             IEnumerable<Employee> employees = payroll.GetEmployees();
             foreach (Employee employee in employees)
             {
-                Console.WriteLine(employee);
+                ui.Print(employee.ToString());
             }
         }
 
