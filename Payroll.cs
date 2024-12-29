@@ -18,6 +18,10 @@ namespace PersonalRegister
         {
             employees.Add(new Employee(name, salary));
         }
+        internal void AddEmployee(Employee employee)
+        {
+            employees.Add(employee);
+        }
         internal IEnumerable<Employee> GetEmployees() 
         {
             return employees.ToArray();
