@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using PersonalRegister.Helpers;
+using PersonalRegister.UI;
 
 namespace PersonalRegister
 {
@@ -9,11 +10,11 @@ namespace PersonalRegister
         static void Main(string[] args)
         {
             Main main = new Main();
+                var ui = new ConsoleUI();
 
             try
             {
-
-                main.Run();
+                main.Run(ui);
             }
             catch (ArgumentNullException ex)
             {
@@ -23,7 +24,7 @@ namespace PersonalRegister
             {
                 Console.WriteLine(ex.Message);
             }
-            finally { main.Run(); }
+            finally { main.Run(ui); }
         }
     }
 }

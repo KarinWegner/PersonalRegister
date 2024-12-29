@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PersonalRegister.Helpers\PersonalRegister.Helpers.csproj" />
+    <ProjectReference Include="..\PersonalRegister.UI\PersonalRegister.UI.csproj" />
   </ItemGroup>
 
 </Project>

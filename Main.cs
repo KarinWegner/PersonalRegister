@@ -1,21 +1,21 @@
 ﻿using PersonalRegister.Helpers;
-using PersonalRegister;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PersonalRegister.UI;
 
 namespace PersonalRegister
 {
     internal class Main
     {
-        private static Payroll payroll = new Payroll();
-        private static ConsoleUI ui = new ConsoleUI();
-        public void Run()
+        private Payroll payroll = new Payroll();
+        private IUI ui;
+        public void Run(IUI ui)
         {
+            this.ui = ui;
             bool isAlive = true;
-
             SeedData();
 
             do
@@ -41,15 +41,15 @@ namespace PersonalRegister
             } while (isAlive);
         }
 
-        private static void AddEmployee()
+        private void AddEmployee()
         {
 
-            string name = Util.AskForString("Name");
-            uint salary = Util.AskForUInt("Salary");
+            string name = Util.AskForString("Name", ui);
+            uint salary = Util.AskForUInt("Salary", ui);
 
             payroll.AddEmployee(name, salary);
         }
-        private static void PrintEmployees()
+        private void PrintEmployees()
         {
             IEnumerable<Employee> employees = payroll.GetEmployees();
             foreach (Employee employee in employees)
@@ -58,7 +58,7 @@ namespace PersonalRegister
             }
         }
 
-        private static void SeedData()
+        private void SeedData()
         {
             payroll.AddEmployee("Kalle", 25000);
             payroll.AddEmployee("Anna", 28000);
